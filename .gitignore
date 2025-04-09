@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env*
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Coverage reports
+coverage/
+
+# NPM/Yarn lock files (optional, based on your workflow)
+package-lock.json
+yarn.lock

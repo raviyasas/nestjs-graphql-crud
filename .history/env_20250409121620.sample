@@ -1,0 +1,12 @@
+PORT=3002
+
+# DB connection
+HOST=127.0.0.1
+DB_PORT=5432
+USERNAME=postgres
+PASSWORD=1234
+
+# DBs
+CLIENT_DB=clientDB
+STORES_DB=storesDB
+

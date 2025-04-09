@@ -1,0 +1,30 @@
+import {
+    registerDecorator,
+    ValidationOptions,
+    ValidatorConstraint,
+    ValidatorConstraintInterface,
+  } from 'class-validator';
+  
+  @ValidatorConstraint({ async: false })
+  export class NoSpecialCharactersConstraint implements ValidatorConstraintInterface {
+    validate(value: string) {
+      return /^[a-zA-Z0-9 ]*$/.test(value); // Allows only letters, numbers, and spaces
+    }
+  
+    defaultMessage() {
+      return 'String contains special characters!';
+    }
+  }
+  
+  export function NoSpecialCharacters(validationOptions?: ValidationOptions) {
+    return function (object: Object, propertyName: string) {
+      registerDecorator({
+        target: object.constructor,
+        propertyName: propertyName,
+        options: validationOptions,
+        constraints: [],
+        validator: NoSpecialCharactersConstraint,
+      });
+    };
+  }
+  

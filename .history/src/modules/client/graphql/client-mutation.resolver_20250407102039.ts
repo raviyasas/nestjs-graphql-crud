@@ -1,0 +1,4 @@
+@Resol
+export class ClientMutationResolver{
+
+}

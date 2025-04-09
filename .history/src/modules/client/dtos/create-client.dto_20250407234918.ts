@@ -1,0 +1,4 @@
+@Inp
+export class CreateClientDto{
+
+}

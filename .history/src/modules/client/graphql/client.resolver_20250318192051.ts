@@ -1,0 +1,5 @@
+
+@Resolver
+export class ClientResolver{
+
+}
